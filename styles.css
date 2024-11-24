@@ -200,7 +200,7 @@ footer img {
     position: absolute;
     bottom: -8px;
     left: 0;
-   visibility: hidden;
+    visibility: visible;
 }
 
 .form button {
@@ -220,7 +220,8 @@ footer img {
 }
 
 .form-content.error a {
-    border-color: red;   
+    border-color: red;
+    visibility: visible;
 }
 
 
