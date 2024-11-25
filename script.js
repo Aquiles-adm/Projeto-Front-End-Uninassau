@@ -117,3 +117,51 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+class MobileNavbar {
+    constructor(mobileMenuSelector, navListSelector, navLinkSelector) {
+      this.mobileMenu = document.querySelector(mobileMenuSelector);
+      this.navList = document.querySelector(navListSelector);
+      this.navLinks = document.querySelectorAll(navLinkSelector);
+      this.activeClass = "active";
+  
+      this.handleClick = this.handleClick.bind(this);
+    }
+  
+    animateLinks() {
+      this.navLinks.forEach((link, index) => {
+        const delay = (index / 7) + 0.3; // Calculate delay based on index
+  
+        // Use a CSS class for animations (cleaner and reusable)
+        link.classList.add('navLinkFade');
+        link.style.animationDelay = `${delay}s`;
+  
+        // Optional: Remove animation after a duration (use CSS transitions instead)
+        setTimeout(() => {
+          link.classList.remove('navLinkFade');
+        }, 500); // Adjust duration as needed
+      });
+    }
+  
+    handleClick() {
+      this.navList.classList.toggle(this.activeClass);
+      this.mobileMenu.classList.toggle(this.activeClass);
+      this.animateLinks();
+    }
+  
+    addClickEvent() {
+      this.mobileMenu.addEventListener('click', this.handleClick);
+    }
+  
+    init() {
+      if (this.mobileMenu) {
+        this.addClickEvent();
+      }
+      return this;
+    }
+  }
+  
+  // Usage
+  const mobileNavbar = new MobileNavbar('.mobile-menu', '.nav-list', '.nav-list li');
+  mobileNavbar.init();
