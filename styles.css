@@ -200,7 +200,7 @@ footer img {
     position: absolute;
     bottom: -8px;
     left: 0;
-    visibility: visible;
+    visibility: hidden;
 }
 
 .form button {

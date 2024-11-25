@@ -32,71 +32,61 @@
                 <div class="form-content">
                     <label for="username">Nome do usuário</label>
                     <input type="text" id="username" placeholder="Digite seu nome">
-                    <a href="">Digite o username</a>
+                    <span class="error-message">insira o username</span>
                 </div>
-            </form>
 
-            <form id="form" class="form">
                 <div class="form-content">
                     <label for="email">Email</label>
                     <input type="email" id="email" placeholder="Digite seu email">
-                    <a href="">O email é obrigatório</a>
+                    <span class="error-message">O email éobrigatório</span>
                 </div>
-            </form>
 
-            <form id="form" class="form">
                 <div class="form-content">
-                    <label for="passaword">Senha</label>
-                    <input type="password" id="passaword" placeholder="Digite sua senha">
-                    <a href="">A senha é obrigatória</a>
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite sua senha">
+                    <span class="error-message">A senha é obrigatória</span>
                 </div>
-            </form>
 
-            <form id="form" class="form">
                 <div class="form-content">
-                    <label for="passaword-confirmation">Confirme sua senha</label>
-                    <input type="password" id="passaword-confirmation" placeholder="Digite sua senha">
-                    <a href="">As senhas Não coincidem</a>
+                    <label for="password-confirmation">Confirme sua senha</label>
+                    <input type="password" id="password-confirmation" placeholder="Digite sua senha">
+                    <span class="error-message">As senhas não coincidem</span>
                 </div>
 
                 <button type="submit">Cadastrar</button>
             </form>
-
         </div>
+
         <div class="container-comentario">
             <section class="header">
                 <h2>Comentário</h2>
             </section>
 
-            <form id="form" class="form">
+            <form id="form-comentario" class="form">
                 <div class="form-content">
-                    <label for="username">Nome do usuário</label>
-                    <input type="text" 
-                    id="username" 
-                    placeholder="Digite seu nome">
+                    <label for="username-comment">Nome do usuário</label>
+                    <input type="text" id="username-comment" placeholder="Digite seu nome">
                 </div>
-            </form>
 
-            <form id="form" class="form">
                 <div class="form-content">
                     <label for="comment">Digite seu Comentário</label>
-                    <input type="comment" id="comment" placeholder="Digite seu Comentário...">
+                    <input type="text" id="comment" placeholder="Digite seu Comentário...">
                 </div>
-                    <button id="botao-enviar" type="submit">Enviar</button>
-            </form>
 
+                <button id="botao-enviar" type="submit">Enviar</button>
+            </form>
         </div>
     </main>
+
     <!--Código Do Rodapé-->
     <footer>
         <section>
             <p>Developed by</p>
-            <img src="cabeca-logo.png" alt="">
-            <img src="aura-logo.png" alt="">
+            <img src="cabeca-logo.png" alt="Logo Cabeça">
+            <img src="aura-logo.png" alt="Logo Aura">
         </section>
     </footer>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
