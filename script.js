@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("form"); // Formulário de cadastro
     const formComentario = document.getElementById("form-comentario"); // Formulário de comentário
@@ -176,3 +177,13 @@ let taskState = {
 
 
 
+=======
+const hamMenu = document.querySelector('.ham-menu');
+
+const offScreenMenu = document.querySelector('.off-screen-menu');
+
+hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle('active');
+    offScreenMenu.classList.toggle('active');
+})
+>>>>>>> c8dd78c499d7d7720be3e5d70198564a61a13d8b
