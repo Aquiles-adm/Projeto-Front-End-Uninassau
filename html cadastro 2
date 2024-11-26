@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastro</title>
+</head>
+<body>
+
+    <div class="preloader" id="preloader">
+        <div class="loader"id="loader"></div>
+        </div>
+
+
+    <!--Código Cabeçalho-->
+    <!--Código Principal-->
+    <header>
+        <section>
+<<<<<<< HEAD
+            <img src="cabeca-logo.png" alt="Logo com imagem de um rosto">
+            <img src="aura-logo.png" alt="Logo com o texto Aura">
+            <nav>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="main.html">Quem Somos?</a></li>
+                    <li><a href="galeria.html">Nossos</a></li>
+                    <li><a href="cadastro.html">Saiba Mais</a></li>
+                    </ul>
+                <div>
+                    <ul>
+                </ul>
+=======
+            <img src="cabeca-logo.png" alt="">
+            <img src="aura-logo.png" alt="">
+            <nav class="off-screen-menu">
+                <ul>
+                    <li><a href="main.html">Quem Somos?</a></li>
+                    <li><a href="galeria.html">Sobre Nós</a></li>
+                    <li><a href="cadastro.html">Entre em contato</a></li>
+                </ul> 
+            </nav>
+            <nav class="ham-menu">
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+>>>>>>> c8dd78c499d7d7720be3e5d70198564a61a13d8b
+            </nav>
+        </section>
+    </header>
+
+
+    <!--Código Principal-->
+    <main class="principal-cadastro">
+        <div class="container-cadastro">
+            <section class="header">
+                <h2>Criar Conta</h2>
+            </section>
+
+            <form id="form" class="form">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                    </div>
+                <div class="form-content">
+                    <label for="username">Nome do usuário</label>
+                    <input type="text" id="username" placeholder="Digite seu nome">
+                    <span class="error-message">insira o username</span>
+                </div>
+
+                <div class="form-content">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Digite seu email">
+                    <span class="error-message">O email éobrigatório</span>
+                </div>
+
+                <div class="form-content">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite sua senha">
+                    <i class= "fas fa-eye" id= "toggle password"></i>
+                    <span class="error-message">A senha é obrigatória</span>
+                </div>
+
+                <div class="form-content">
+                    <label for="password-confirmation">Confirme sua senha</label>
+                    <input type="password" id="password-confirmation" placeholder="Digite sua senha">
+                    <span class="error-message">As senhas não coincidem</span>
+                </div>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+        <div class="container-comentario">
+            <section class="header">
+                <h2>Comentário</h2>
+            </section>
+
+            <form id="form-comentario" class="form">
+                <div class="form-content">
+                    <label for="username-comment">Nome do usuário</label>
+                    <input type="text" id="username-comment" placeholder="Digite seu nome">
+                </div>
+
+                <div class="form-content">
+                    <label for="comment">Digite seu Comentário</label>
+                    <input type="text" id="comment" placeholder="Digite seu Comentário...">
+                </div>
+                
+                <button id="botao-enviar" type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <!--Código Do Rodapé-->
+    <footer>
+        <section>
+            <p>Developed by</p>
+            <img src="cabeca-logo.png" alt="Logo Cabeça">
+            <img src="aura-logo.png" alt="Logo Aura">
+        </section>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="script_preloader.js"></script>
+</body>
+</html>
+
+
+
+
+
+
