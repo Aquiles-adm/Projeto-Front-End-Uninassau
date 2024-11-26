@@ -55,6 +55,12 @@ document.addEventListener("DOMContentLoaded", function() {
         return true;
     }
 
+
+
+
+
+
+    
     // Função para validar a confirmação de senha
     function validatePasswordConfirmation(passwordConfirmation, password) {
         if (passwordConfirmation.value.trim() === "") {
@@ -119,49 +125,54 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-class MobileNavbar {
-    constructor(mobileMenuSelector, navListSelector, navLinkSelector) {
-      this.mobileMenu = document.querySelector(mobileMenuSelector);
-      this.navList = document.querySelector(navListSelector);
-      this.navLinks = document.querySelectorAll(navLinkSelector);
-      this.activeClass = "active";
+//carregamento form//
+
+let taskState = {
+    isRunning: false,
+    isCompleted: false,
+    progress: 0,
+    interval: null,
+  };
   
-      this.handleClick = this.handleClick.bind(this);
-    }
+  const progressBar = document.getElementById('progressBar');
+  const cadastroButton = document.getElementById('botao-cadastrar');
   
-    animateLinks() {
-      this.navLinks.forEach((link, index) => {
-        const delay = (index / 7) + 0.3; // Calculate delay based on index
+  function simulateTask() {
+    if (taskState.isRunning) return; // Verifica se já há uma tarefa em execução
   
-        // Use a CSS class for animations (cleaner and reusable)
-        link.classList.add('navLinkFade');
-        link.style.animationDelay = `${delay}s`;
+    taskState.isRunning = true;
+    progressBar.style.display = 'block';
   
-        // Optional: Remove animation after a duration (use CSS transitions instead)
-        setTimeout(() => {
-          link.classList.remove('navLinkFade');
-        }, 500); // Adjust duration as needed
-      });
-    }
+    taskState.interval = setInterval(() => {
+      taskState.progress += 10;
+      progressBar.style.width = taskState.progress + '%';
   
-    handleClick() {
-      this.navList.classList.toggle(this.activeClass);
-      this.mobileMenu.classList.toggle(this.activeClass);
-      this.animateLinks();
-    }
-  
-    addClickEvent() {
-      this.mobileMenu.addEventListener('click', this.handleClick);
-    }
-  
-    init() {
-      if (this.mobileMenu) {
-        this.addClickEvent();
+      if (taskState.progress >= 100 || taskState.isCompleted) {
+        clearInterval(taskState.interval);
+        pauseProgress();
+        taskState.isRunning = false;
+        taskState.isCompleted = false;
       }
-      return this;
-    }
+    }, 500);
+  
+    // Simular a tarefa real (substitua por sua lógica)
+    setTimeout(() => {
+      taskState.isCompleted = true;
+    }, 2000);
   }
   
-  // Usage
-  const mobileNavbar = new MobileNavbar('.mobile-menu', '.nav-list', '.nav-list li');
-  mobileNavbar.init();
+  function pauseProgress() {
+    progressBar.style.animationPlayState = 'paused';
+    progressBar.style.display = 'none';
+  }
+  
+    cadastroButton.addEventListener('click', simulateTask);
+
+
+
+
+
+
+
+
+

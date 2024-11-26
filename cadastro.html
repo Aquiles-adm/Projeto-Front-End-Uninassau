@@ -7,6 +7,12 @@
     <title>Cadastro</title>
 </head>
 <body>
+
+    <div class="preloader" id="preloader">
+        <div class="loader"id="loader"></div>
+        </div>
+
+
     <!--Código Cabeçalho-->
     <header>
         <section>
@@ -21,17 +27,6 @@
                     </ul>
                 <div>
                     <ul>
-                    <a class="hamburguer" href="">tyger cods</a>
-                    <a class=  "mobile-menu"></a>
-                    <div class="line 1"></div>
-                    <div class="line 2"></div>
-                    <div class="line 3"></div>
-                    <li><a href="/">inicio</a></li>
-                    <li><a href="/">sobre</a></li>
-                    <li><a href="/">projetos</a></li>
-                    <li><a href="/">contatos</a></li>
-                    </ul>
-                </div>
                 </ul>
             </nav>
         </section>
@@ -46,6 +41,9 @@
             </section>
 
             <form id="form" class="form">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                    </div>
                 <div class="form-content">
                     <label for="username">Nome do usuário</label>
                     <input type="text" id="username" placeholder="Digite seu nome">
@@ -61,6 +59,7 @@
                 <div class="form-content">
                     <label for="password">Senha</label>
                     <input type="password" id="password" placeholder="Digite sua senha">
+                    <i class= "fas fa-eye" id= "toggle password"></i>
                     <span class="error-message">A senha é obrigatória</span>
                 </div>
 
@@ -89,7 +88,7 @@
                     <label for="comment">Digite seu Comentário</label>
                     <input type="text" id="comment" placeholder="Digite seu Comentário...">
                 </div>
-
+                
                 <button id="botao-enviar" type="submit">Enviar</button>
             </form>
         </div>
@@ -105,6 +104,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="script_preloader.js"></script>
 </body>
 </html>
 
